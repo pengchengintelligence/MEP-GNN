@@ -149,8 +149,8 @@ If you use this code, please cite:
 @article{luo2026mepgnn,
   title = {MEP-GNN: Modular Evidence-Preserving Graph Learning for Robust Multi-Omics Integration and Interpretation},
   author = {Luo, Haoran and Li, Wei and Zheng, Lili and Fan, Zhoujie and Li, Sichen and Liang, Hong and Zhang, Chen Jason and Yao, Xiaohui and Cong, Shan},
-  journal = {Bioinformatics},
+  journal = {},
   year = {2026},
-  note = {In press}
+  note = {}
 }
 ```
