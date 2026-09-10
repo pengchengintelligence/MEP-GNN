@@ -2,7 +2,31 @@
 
 Official implementation for **MEP-GNN: Modular Evidence-Preserving Graph Learning for Robust Multi-Omics Integration and Interpretation**.
 
-MEP-GNN is a robust and interpretable graph learning framework for multi-omics disease prediction. It combines phenotype-guided modular graph representation learning, predictive reliability learning, and reliability-aware multi-omics integration.
+## Overview
+
+Multi-omics integration facilitates complex disease prediction, but existing methods often lack robustness to incomplete molecular observations and provide explanations whose reliability under perturbations remains unclear. MEP-GNN is a robust and interpretable graph learning framework for multi-omics disease prediction. It combines phenotype-guided modular graph representation learning, predictive reliability learning, and reliability-aware multi-omics integration.
+
+![Overview of the MEP-GNN framework](assets/fig_framework.png)
+
+*Figure 1. Overview of the MEP-GNN framework. Phenotype-associated molecular modules are identified from multi-omics profiles, used to guide modular graph representation learning, and integrated through predictive reliability learning for robust disease prediction and interpretation.*
+
+## Abstract
+
+We propose **Modular Evidence-Preserving Graph Neural Network (MEP-GNN)**, a robust and interpretable framework that integrates phenotype-associated molecular modules, sample-specific predictive reliability learning, and robust-fidelity-guided subgraph interpretation. MEP-GNN preserves disease-relevant structural information during graph representation learning, adaptively integrates heterogeneous omics according to transformed true-class probability-based reliability, and identifies group-level explanatory subgraphs that remain predictive under feature perturbations. Across six benchmark multi-omics datasets, MEP-GNN achieves superior or competitive predictive performance and improves robustness in both prediction and molecular interpretation under incomplete graph information.
+
+## Our Contributions
+
+- We formulate robust multi-omics learning as a joint problem of preserving phenotype-relevant molecular structure, estimating sample-specific omics reliability, and maintaining reliable molecular evidence under imperfect observations.
+- We propose MEP-GNN, which combines phenotype-guided modular graph learning with transformed true-class probability-based reliability estimation for robust and adaptive multi-omics integration.
+- We develop a robust-fidelity-guided subgraph interpretation framework that searches within phenotype-associated modules to identify perturbation-stable molecular structures, supported by statistical significance testing.
+
+![Robust-fidelity-guided post-hoc interpretation](assets/fig_interpretation.png)
+
+*Figure 2. Robust-fidelity-guided post-hoc interpretation. Phenotype-associated modules define a constrained explanation space, while MCTS and robust fidelity evaluation identify perturbation-stable explanatory subgraphs for statistical validation and functional interpretation.*
+
+## Code Release
+
+This repository currently provides the WGCNA preprocessing and predictive MEP-GNN training code. The complete code release, including the full interpretation pipeline and additional reproducibility materials, will be made available after the paper is accepted.
 
 ## Method Modules
 
@@ -14,14 +38,15 @@ MEP-GNN is a robust and interpretable graph learning framework for multi-omics d
 | MEP-GNN multi-omics classifier | `model/model.py` (`MEPGNN`, `Fusion`) | Fuses reliability-weighted omics representations for disease prediction. |
 | Training and evaluation | `model/train.py` | Trains MEP-GNN and reports ACC, F1, AUC, sensitivity, and specificity. |
 
-This repository contains the WGCNA preprocessing and predictive MEP-GNN training code. The robust-fidelity-guided post-hoc interpretation/search module described in the manuscript is not included in this code snapshot.
-
 ## Repository Structure
 
 ```text
 MEP-GNN/
 ├── README.md
 ├── requirements.txt
+├── assets/
+│   ├── fig_framework.png
+│   └── fig_interpretation.png
 ├── WGCNA/
 │   └── processing.R
 └── model/
@@ -129,4 +154,3 @@ If you use this code, please cite:
   note = {In press}
 }
 ```
-
