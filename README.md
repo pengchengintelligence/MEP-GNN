@@ -1,6 +1,7 @@
 # MEP-GNN
 
 Official implementation for **MEP-GNN: Modular Evidence-Preserving Graph Learning for Robust Multi-Omics Integration and Interpretation**.
+
 Author: Haoran Luo, Wei Li, Lili Zheng, Zhoujie Fan, Sichen Li, Hong Liang, Chen Jason Zhang, Xiaohui Yao, and Shan Cong
 
 ## Overview
