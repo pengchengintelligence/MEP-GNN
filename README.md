@@ -1,7 +1,7 @@
 # MEP-GNN
 
 Official implementation for **MEP-GNN: Modular Evidence-Preserving Graph Learning for Robust Multi-Omics Integration and Interpretation**.
-
+Author: Haoran Luo, Wei Li, Lili Zheng, Zhoujie Fan, Sichen Li, Hong Liang, Chen Jason Zhang, Xiaohui Yao, Shan Cong
 ## Overview
 
 Multi-omics integration facilitates complex disease prediction, but existing methods often lack robustness to incomplete molecular observations and provide explanations whose reliability under perturbations remains unclear. MEP-GNN is a robust and interpretable graph learning framework for multi-omics disease prediction. It combines phenotype-guided modular graph representation learning, predictive reliability learning, and reliability-aware multi-omics integration.
